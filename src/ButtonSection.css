@@ -1,0 +1,21 @@
+.botones
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly;
+    height: 60%;
+    width: 100%;
+    padding: 0px 0px 10px 0px;
+}
+
+button
+{
+    background-color: var(--Grey);
+    border: none;
+    width: 85%;
+    border-radius: 7px;
+    color: var(--White);  
+    padding: 13px 0px 13px 0px;
+    font-weight: 700;
+}

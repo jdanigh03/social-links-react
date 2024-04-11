@@ -1,0 +1,24 @@
+.contenedor
+{
+    background-color: var(--DarkGrey);
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    width: 320px;
+    height: 560px;
+    border-radius: 10px;  
+    align-content:flex-start;
+    justify-content:space-between;
+}
+@media (min-width: 1440px) {
+    .contenedor
+  {
+      width: 382px;    
+      height: 600px;
+  }
+  
+  button{
+      width: 80%;
+  }
+  }
