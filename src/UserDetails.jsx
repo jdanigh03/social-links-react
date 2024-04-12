@@ -1,16 +1,17 @@
-import React from 'react';
-import './UserDetails.css';
-import avatarJessica from '../public/avatar-jessica.jpeg';
+import React from "react";
+import "./UserDetails.css";
 
-const UserDetails = () => {
+const UserDetails = (props) => {
+  const user = props.user; 
+  
   return (
     <div className="texto">
-        <img src={avatarJessica} alt="jess"/>
-        <h2>Jessica Randall</h2>
-        <h3>London, United Kingdom</h3>
-        <p>"Front-end developer and avid reader."</p>
+      <img src={user.avatar} alt={`avatar de ${user.name}`} />
+      <h2>{user.name}</h2>
+      <h3>{user.ubication}</h3>
+      <p>{user.description}</p>
     </div>
-  )
-}
+  );
+};
 
-export default UserDetails
+export default UserDetails;
