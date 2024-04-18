@@ -6,16 +6,17 @@
     justify-content:center;
     align-items:center;
     width: 320px;
-    height: 560px;
+    height: 280px;
     border-radius: 10px;  
     align-content:flex-start;
     justify-content:space-between;
+    margin-bottom: 35px;
 }
 @media (min-width: 1440px) {
     .contenedor
   {
       width: 382px;    
-      height: 600px;
+      height: 450px;
   }
   
   button{

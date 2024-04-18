@@ -4,20 +4,39 @@ import Card from "./Card";
 
 function App() {
   const [users, setUsers] = useState([]);
-  
+
   useEffect(() => {
-    fetch("https://661037cf0640280f219c98e1.mockapi.io/api/v2/users")
-      .then((res) => res.json())
-      .then((data) => {
-        setUsers(data);
-        console.log(data);
-      });
+    const randomIds = generateRandomIds(10, 1, 826);
+    personajesRandoms(randomIds);
   }, []);
-  
+
+  const generateRandomIds = (count, min, max) => {
+    const randomIds = [];
+    while (randomIds.length < count) {
+      const randomId = Math.floor(Math.random() * (max - min + 1)) + min;
+      if (!randomIds.includes(randomId)) {
+        randomIds.push(randomId);
+      }
+    }
+    return randomIds;
+  };
+
+  const personajesRandoms = async (randomIds) => {
+    const result = await Promise.allSettled(randomIds.map(id =>
+      fetch(`https://rickandmortyapi.com/api/character/${id}`).then(res => res.json())
+    ));
+
+    const personajes = result
+      .filter(response => response.status === "fulfilled")
+      .map(response => response.value);
+    
+    setUsers(personajes);
+  };
+
   return (
     <>
-      {users.map((user) => (
-        <Card key={user.id} user={user} />
+      {users.map((user, index) => (
+        <Card key={index} user={user} />
       ))}
     </>
   );

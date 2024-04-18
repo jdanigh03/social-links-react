@@ -13,13 +13,13 @@ img
 {
     border-radius: 50%;
     height: 80px;
-    margin:40px 0px 20px 0px;
+    margin:160px 0px 20px 0px;
 }
 h2
 {
     font-weight: 600;
     color: var(--White);
-    line-height: 0px;
+    line-height: 20px;
 }
 h3
 {
