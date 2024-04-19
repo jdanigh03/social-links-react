@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-// import "./App.css";
-import "./AppRick.css";
-// import Card from "./Card";
-import CardRick from "./CardRick";
+import "./App.css";
+
+import Card from "./Card";
+
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -38,8 +38,7 @@ function App() {
   return (
     <>
       {users.map((user, index) => (
-        // <Card key={index} user={user} />
-        <CardRick key={index} user={user} />
+        <Card key={index} user={user} />
       ))}
     </>
   );
