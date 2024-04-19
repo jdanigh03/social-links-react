@@ -1,0 +1,38 @@
+.texto
+{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    margin: 0px 10px 0px 10px;
+    width: 90%;
+    height: 40%;
+    padding: 15px 0px 13px 0px;
+}
+img
+{
+    height: 380px;
+    width: 390px;
+    margin:175px 0px 20px 0px;
+}
+h2
+{
+    font-weight: 200;
+    color: var(--White);
+    line-height: 20px;
+}
+h3
+{
+    
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--Green);
+    line-height: 0px;
+    margin-top: 0px;
+}
+p
+{
+    font-size: 14px;
+    color: var(--White);
+    line-height: 40px;
+}

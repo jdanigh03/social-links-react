@@ -1,0 +1,20 @@
+.informacion-extra {
+  margin-top: 80px; 
+  padding: 5px;
+  background-color:var(--DarkGrey)y;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.episode-info {
+  width: 20%; 
+  margin-bottom: 15px;
+}
+
+.episode-info p {
+  font-size: 14px;
+  color: white;
+  line-height: 1.5;
+}
