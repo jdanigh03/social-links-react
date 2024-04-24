@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Card from "./Card";
 
 const Home = () => {
   const [users, setUsers] = useState([]);
-  const history = useHistory();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const randomIds = generateRandomIds(10, 1, 826);
@@ -23,21 +23,21 @@ const Home = () => {
   };
 
   const personajesRandoms = async (randomIds) => {
-    const result = await Promise.allSettled(randomIds.map(id =>
-      fetch(`https://rickandmortyapi.com/api/character/${id}`).then(res => res.json())
-    ));
-
+    const result = await Promise.allSettled(
+      randomIds.map(id =>
+        fetch(`https://rickandmortyapi.com/api/character/${id}`).then(res => res.json())
+      )
+    );
     const personajes = result
       .filter(response => response.status === "fulfilled")
       .map(response => response.value);
-    
     setUsers(personajes);
   };
 
   const handleCardClick = (id) => {
-    history.push(`/card?id=${id}`);
+    navigate(`/card?id=${id}`);
   };
-  
+
   return (
     <>
       {users.map((user, index) => (
