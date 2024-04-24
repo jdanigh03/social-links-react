@@ -11,13 +11,14 @@
 }
 img
 {
-    height: 380px;
-    width: 390px;
-    margin:175px 0px 20px 0px;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    margin:160px 0px 20px 0px;
 }
 h2
 {
-    font-weight: 200;
+    font-weight: 600;
     color: var(--White);
     line-height: 20px;
 }
@@ -28,7 +29,6 @@ h3
     font-size: 14px;
     color: var(--Green);
     line-height: 0px;
-    margin-top: 0px;
 }
 p
 {

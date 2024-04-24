@@ -1,5 +1,5 @@
 import React from 'react'
-import "./UserDetailsRick.css"
+import "./OtrosDetalles.css"
 
 const UserDetailsRick = ({user}) => {
   return (
@@ -7,7 +7,6 @@ const UserDetailsRick = ({user}) => {
       <img src={user.image} alt={`avatar de ${user.name}`} />
       <h3>{user.status}</h3>
       <h2>{user.type}</h2>
-      {/* {console.log(user.name)} */}
     </div>
   )
 }

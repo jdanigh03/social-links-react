@@ -12,12 +12,13 @@
 img
 {
     border-radius: 50%;
-    height: 80px;
-    margin:160px 0px 20px 0px;
+    height: 170px;
+    width: 170px;
+    margin-top: 220px;
 }
 h2
 {
-    font-weight: 600;
+    font-weight: 200;
     color: var(--White);
     line-height: 20px;
 }
@@ -28,6 +29,7 @@ h3
     font-size: 14px;
     color: var(--Green);
     line-height: 0px;
+    margin-top: 0px;
 }
 p
 {
