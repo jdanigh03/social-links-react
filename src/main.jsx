@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import Home from "./Home.jsx";
-import RickAndMortyApp from "./RickAndMortyApp.jsx";
+import CardRick from "./CardRick.jsx";
 import { createHashRouter, RouterProvider } from "react-router-dom";
 
 const router = createHashRouter([
@@ -13,7 +13,7 @@ const router = createHashRouter([
   },
   {
     path: "/character",
-    element: <RickAndMortyApp />,
+    element: <CardRick />,
   },
   {
     path: "/*",
