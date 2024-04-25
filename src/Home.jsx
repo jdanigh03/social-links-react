@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Card from "./Card";
 
 const Home = () => {
   const [users, setUsers] = useState([]);
-  const history = useHistory();
+  const navigate = useNavigate(); // Reemplazar useHistory por useNavigate
 
   useEffect(() => {
     const randomIds = generateRandomIds(10, 1, 826);
@@ -34,7 +35,7 @@ const Home = () => {
   };
 
   const handleCardClick = (id) => {
-    history.push(`/card?id=${id}`);
+    navigate(`/card?id=${id}`);
   };
 
   return (
